@@ -1,0 +1,640 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+AGENTS.md
+astro.config.mjs
+CLAUDE.md
+package.json
+public/favicon.ico
+public/favicon.svg
+README.md
+src/layouts/Layout.astro
+src/pages/index.astro
+src/styles/global.css
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+</file>
+
+<file path="AGENTS.md">
+## Development
+
+When starting the dev server, use background mode:
+
+```
+astro dev --background
+```
+
+Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+## Documentation
+
+Full documentation: https://docs.astro.build
+
+Consult these guides before working on related tasks:
+
+- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
+- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
+- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
+- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
+- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
+- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+</file>
+
+<file path="astro.config.mjs">
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+// https://astro.build/config
+export default defineConfig({});
+</file>
+
+<file path="CLAUDE.md">
+## Development
+
+When starting the dev server, use background mode:
+
+```
+astro dev --background
+```
+
+Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+
+## Documentation
+
+Full documentation: https://docs.astro.build
+
+Consult these guides before working on related tasks:
+
+- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
+- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
+- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
+- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
+- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
+- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+</file>
+
+<file path="package.json">
+{
+  "name": "dmc-club",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.2.4"
+  }
+}
+</file>
+
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
+    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
+    <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
+</svg>
+</file>
+
+<file path="README.md">
+# Astro Starter Kit: Minimal
+
+```sh
+npm create astro@latest -- --template minimal
+```
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+</file>
+
+<file path="src/layouts/Layout.astro">
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "DMC – Creative Digital Arts Club at DMC College Foundation, Inc. A community for photographers, videographers, editors, animators, and designers.",
+} = Astro.props;
+
+const FORM_URL = "https://forms.gle/cCZSLsou414bvr5Z8";
+const FB_URL = "https://www.facebook.com/dmccreativedigitalartsclub";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="wrap">
+        <div class="logo">
+          <span class="badge">DMC</span> CREATIVE DIGITAL ARTS CLUB
+        </div>
+        <a class="nav-cta" href={FORM_URL} target="_blank" rel="noopener">Apply Now</a>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer>
+      <div class="wrap">
+        <span class="mono">DMC — Creative Digital Arts Club · Dipolog City</span>
+        <a class="fb mono" href={FB_URL} target="_blank" rel="noopener">Facebook →</a>
+      </div>
+    </footer>
+  </body>
+</html>
+</file>
+
+<file path="src/pages/index.astro">
+---
+import Layout from '../layouts/Layout.astro';
+
+const FORM_URL = "https://forms.gle/cCZSLsou414bvr5Z8";
+
+const focusAreas = [
+  { icon: "PH", title: "Photography", copy: "Event coverage, portraits, and personal projects, shot and shared with the group." },
+  { icon: "VD", title: "Videography", copy: "Recap videos, short docs, and campus coverage from concept to final cut." },
+  { icon: "ED", title: "Editing", copy: "Photo retouching and video post-production, the craft of shaping raw footage." },
+  { icon: "AN", title: "Animation", copy: "Motion graphics and animated shorts, from first sketch to rendered frame." },
+  { icon: "DS", title: "Design", copy: "Posters, layouts, and visual identity work for club and campus events." },
+];
+
+const whyJoin = [
+  { title: "A community of makers", copy: "Meet DMC students who care about the same crafts you do — shoot together, critique each other's work, and grow faster than you would solo." },
+  { title: "Real projects, real practice", copy: "Cover campus events, produce content, and build a portfolio out of work that actually got used, not just class exercises." },
+  { title: "Skill-sharing, not gatekeeping", copy: "Whether you're picking up a camera for the first time or already editing like a pro, members learn from each other on every project." },
+  { title: "A creative outlet on campus", copy: "A standing space at DMC where making things — photos, videos, art, design — is the whole point." },
+];
+---
+
+<Layout title="DMC Creative Digital Arts Club — Join Us">
+  <header class="hero">
+    <div class="hero-burst burst"></div>
+    <div class="wrap">
+      <span class="eyebrow-tag">DMC College Foundation, Inc. · Dipolog City</span>
+      <h1>Where creatives <span class="pop">team up.</span></h1>
+      <div class="speech-bubble">
+        DMC – Creative Digital Arts Club is a community for students who shoot, edit, animate, and design — a space to connect, collaborate, and grow your craft together.
+      </div>
+      <div class="hero-actions">
+        <a class="btn-pow" href={FORM_URL} target="_blank" rel="noopener">Fill Up the Form!</a>
+        <span class="hero-note mono">Takes ~5 minutes · Google Forms</span>
+      </div>
+
+      <div class="filmstrip">
+        <div>Photography</div>
+        <div>Videography</div>
+        <div>Editing</div>
+        <div>Animation</div>
+        <div>Design</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="tag-label">Issue #01 — About</span>
+        <h2>Your creative side, with an actual crew.</h2>
+      </div>
+      <div class="about-copy">
+        <p>The DMC Creative Digital Arts Club brings together <strong>DMC College Foundation</strong> students who are into <strong>photography, videography, editing, animation, and design</strong> — whether you're already building a portfolio or just curious where your creativity could go.</p>
+        <p>We're less a formal org and more a working studio: members shoot events together, trade feedback on edits, learn new tools from each other, and take on real creative projects for the campus community. No experience requirement — just genuine interest and a willingness to make stuff.</p>
+        <p>This page is your quick briefing before you apply. Read it, then head to the form — it only takes a few minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mv">
+    <div class="wrap">
+      <div class="mv-head">
+        <span class="tag-label">Issue #02 — The mission</span>
+        <h2>Mission &amp; Vision</h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card">
+          <span class="kicker">★ MISSION</span>
+          <h3>What we do</h3>
+          <p>To build a home for DMC students who create — where photographers, videographers, editors, animators, and designers can connect, learn from one another, and turn raw creativity into finished work, together.</p>
+        </div>
+        <div class="mv-card">
+          <span class="kicker">★ VISION</span>
+          <h3>Where we're going</h3>
+          <p>A DMC campus where student creativity is visible, valued, and always in motion — with the Creative Digital Arts Club as the launchpad where members grow from beginners into confident, capable creators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus">
+    <div class="wrap">
+      <div class="focus-head">
+        <span class="tag-label">Issue #03 — Skill tree</span>
+        <h2>Five crafts, one club.</h2>
+      </div>
+      <div class="badges">
+        {focusAreas.map((f) => (
+          <div class="stat-badge">
+            <div class="icon">{f.icon}</div>
+            <h4>{f.title}</h4>
+            <p>{f.copy}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="tag-label">Issue #04 — Perks</span>
+        <h2 style="font-size:clamp(28px,4.4vw,40px); margin-top:14px;">Why join?</h2>
+      </div>
+      <div class="why-list">
+        {whyJoin.map((w, i) => (
+          <div class="why-item">
+            <span class="num">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h4>{w.title}</h4>
+              <p>{w.copy}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="wrap">
+      <span class="eyebrow-tag" style="background:var(--ink);">Ready when you are</span>
+      <h2>Tell us about yourself and claim your spot.</h2>
+      <p>The application form covers the basics — who you are, what you make, and where you'd like to grow. Submit it and the club officers will follow up.</p>
+      <a class="btn-pow" href={FORM_URL} target="_blank" rel="noopener">Fill Up the Form!</a>
+      <div class="hero-note mono">forms.gle/cCZSLsou414bvr5Z8</div>
+    </div>
+  </section>
+</Layout>
+</file>
+
+<file path="src/styles/global.css">
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --red:#E4212B;
+  --red-dark:#A9101A;
+  --ink:#0B0B0C;
+  --paper:#F7F1E3;
+  --white:#FFFFFF;
+  --line: var(--ink);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{
+  font-family:'Bangers', cursive;
+  font-weight:400;
+  letter-spacing:0.02em;
+  line-height:0.95;
+  margin:0;
+  text-transform:uppercase;
+}
+.mono{font-family:'Space Mono',monospace;}
+a{color:inherit;}
+img{max-width:100%; display:block;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important;}
+}
+
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+
+/* halftone texture */
+.halftone{
+  background-image: radial-gradient(var(--ink) 1.4px, transparent 1.6px);
+  background-size: 12px 12px;
+  background-position: 0 0;
+}
+.halftone-red{
+  background-image: radial-gradient(var(--red) 1.6px, transparent 1.8px);
+  background-size: 11px 11px;
+}
+
+/* comic panel */
+.panel{
+  border:3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  background:var(--white);
+  position:relative;
+}
+
+/* jagged burst shape */
+.burst{
+  clip-path: polygon(50% 0%, 61% 12%, 75% 2%, 78% 18%, 94% 13%, 90% 30%, 100% 40%,
+    86% 48%, 96% 62%, 80% 63%, 82% 80%, 66% 72%, 60% 90%, 50% 76%, 40% 90%,
+    34% 72%, 18% 80%, 20% 63%, 4% 62%, 14% 48%, 0% 40%, 10% 30%, 6% 13%,
+    22% 18%, 25% 2%, 39% 12%);
+}
+
+/* NAV */
+nav.site-nav{
+  position:sticky; top:0; z-index:50;
+  background:var(--ink);
+  border-bottom:4px solid var(--red);
+}
+nav.site-nav .wrap{display:flex; align-items:center; justify-content:space-between; height:66px;}
+.logo{
+  display:flex; align-items:center; gap:10px;
+  font-family:'Bangers', cursive; font-size:22px; color:var(--white); letter-spacing:0.03em;
+}
+.logo .badge{
+  background:var(--red); color:var(--white); font-family:'Space Mono',monospace; font-size:10px;
+  padding:3px 6px; border:2px solid var(--white); transform:rotate(-4deg);
+}
+.nav-cta{
+  font-family:'Bangers', cursive; font-size:16px; letter-spacing:0.03em;
+  background:var(--red); color:var(--white); padding:9px 20px 7px; border:2px solid var(--white);
+  text-decoration:none; box-shadow:3px 3px 0 var(--white);
+  transition: transform .12s ease;
+}
+.nav-cta:hover{transform:translate(-2px,-2px);}
+
+/* HERO */
+.hero{
+  padding:70px 0 90px;
+  position:relative;
+  overflow:hidden;
+  background:var(--paper);
+}
+.hero-burst{
+  position:absolute; top:-60px; right:-80px; width:420px; height:420px;
+  background:var(--red); opacity:0.9; z-index:0;
+}
+.hero .wrap{position:relative; z-index:1;}
+.eyebrow-tag{
+  display:inline-block; font-family:'Space Mono',monospace; font-size:12px; text-transform:uppercase;
+  letter-spacing:0.08em; background:var(--ink); color:var(--white); padding:6px 12px;
+  transform:rotate(-2deg); margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(46px,8vw,92px); color:var(--ink); -webkit-text-stroke:2px var(--ink);
+  text-shadow: 4px 4px 0 var(--red);
+}
+.hero h1 .pop{color:var(--white); -webkit-text-stroke:2.5px var(--ink); text-shadow:5px 5px 0 var(--red);}
+.speech-bubble{
+  margin-top:32px; max-width:520px; background:var(--white); border:3px solid var(--ink);
+  border-radius:26px; padding:20px 26px; position:relative; box-shadow:5px 5px 0 var(--ink);
+  font-size:16.5px; line-height:1.6;
+}
+.speech-bubble::after{
+  content:''; position:absolute; left:46px; bottom:-22px; width:0; height:0;
+  border:14px solid transparent; border-top-color:var(--white);
+}
+.speech-bubble::before{
+  content:''; position:absolute; left:43px; bottom:-27px; width:0; height:0;
+  border:16px solid transparent; border-top-color:var(--ink); z-index:-1;
+}
+.hero-actions{margin-top:44px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+.btn-pow{
+  font-family:'Bangers', cursive; font-size:20px; letter-spacing:0.03em;
+  background:var(--red); color:var(--white); padding:16px 30px 13px; text-decoration:none;
+  border:3px solid var(--ink); box-shadow:6px 6px 0 var(--ink);
+  display:inline-flex; align-items:center; gap:10px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-pow:hover{transform:translate(-3px,-3px); box-shadow:9px 9px 0 var(--ink);}
+.btn-pow.dark{background:var(--ink); color:var(--white);}
+.hero-note{font-family:'Space Mono',monospace; font-size:12px; color:#5a5548;}
+
+.filmstrip{
+  margin-top:60px; display:grid; grid-template-columns:repeat(5,1fr); border:3px solid var(--ink);
+  background:var(--ink);
+}
+.filmstrip div{
+  padding:14px 8px; text-align:center; font-family:'Space Mono',monospace; font-size:11px;
+  text-transform:uppercase; letter-spacing:0.05em; color:var(--white); border-right:2px solid var(--red);
+}
+.filmstrip div:last-child{border-right:none;}
+
+/* ABOUT */
+.about{padding:90px 0; background:var(--white); border-top:4px solid var(--ink); border-bottom:4px solid var(--ink);}
+.about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:start;}
+.tag-label{
+  display:inline-block; font-family:'Space Mono',monospace; font-size:12px; text-transform:uppercase;
+  letter-spacing:0.1em; color:var(--white); background:var(--red); padding:5px 10px; transform:rotate(-2deg);
+}
+.about h2{font-size:clamp(30px,4.4vw,44px); margin-top:16px; color:var(--ink);}
+.about-copy p{font-size:16px; line-height:1.75; color:#333; margin:0 0 18px;}
+.about-copy p:last-child{margin-bottom:0;}
+.about-copy strong{color:var(--red-dark);}
+
+/* MISSION / VISION */
+.mv{padding:90px 0; background:var(--ink); position:relative;}
+.mv .wrap{position:relative; z-index:1;}
+.mv-head{text-align:center; margin-bottom:44px;}
+.mv-head h2{color:var(--white); font-size:clamp(30px,4.4vw,44px);}
+.mv-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+.mv-card{
+  background:var(--white); border:3px solid var(--ink); box-shadow:7px 7px 0 var(--red);
+  padding:36px 32px; position:relative;
+}
+.mv-card .kicker{
+  font-family:'Bangers', cursive; font-size:15px; color:var(--red); letter-spacing:0.05em;
+}
+.mv-card h3{font-size:30px; margin:10px 0 16px; color:var(--ink);}
+.mv-card p{font-size:15px; line-height:1.7; color:#333; margin:0;}
+
+/* FOCUS AREAS — stat badges like the poster */
+.focus{padding:90px 0; background:var(--paper);}
+.focus-head{margin-bottom:48px;}
+.focus-head h2{font-size:clamp(30px,4.4vw,44px);}
+.badges{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+.stat-badge{
+  background:var(--white); border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink);
+  padding:22px 16px 20px; text-align:center; transition:transform .15s ease, box-shadow .15s ease;
+}
+.stat-badge:hover{transform:translate(-3px,-3px); box-shadow:8px 8px 0 var(--red);}
+.stat-badge .icon{
+  width:44px; height:44px; margin:0 auto 12px; border-radius:50%; background:var(--red);
+  border:2px solid var(--ink); display:flex; align-items:center; justify-content:center;
+  color:var(--white); font-family:'Bangers',cursive; font-size:18px;
+}
+.stat-badge h4{font-family:'Bangers',cursive; font-size:19px; letter-spacing:0.02em; margin-bottom:8px;}
+.stat-badge p{font-size:12.5px; line-height:1.5; color:#444; margin:0;}
+
+/* WHY JOIN */
+.why{padding:90px 0; background:var(--white); border-top:4px solid var(--ink);}
+.why-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px;}
+.why-list{display:flex; flex-direction:column; gap:0;}
+.why-item{
+  display:grid; grid-template-columns:56px 1fr; gap:18px; padding:24px 0; border-top:2px dashed var(--ink);
+}
+.why-list .why-item:last-child{border-bottom:2px dashed var(--ink);}
+.why-item .num{font-family:'Bangers',cursive; font-size:26px; color:var(--red);}
+.why-item h4{font-size:17px; margin-bottom:6px; font-weight:800;}
+.why-item p{font-size:14.5px; color:#3d3d3d; line-height:1.6; margin:0;}
+
+/* CTA */
+.cta-strip{
+  padding:100px 0; text-align:center; background:var(--red); color:var(--white); position:relative;
+  border-top:4px solid var(--ink);
+}
+.cta-strip h2{font-size:clamp(34px,6vw,64px); max-width:780px; margin:0 auto; color:var(--white); -webkit-text-stroke:2px var(--ink);}
+.cta-strip p{max-width:560px; margin:22px auto 0; font-size:16px; line-height:1.65; color:#fff0ef;}
+.cta-strip .btn-pow{margin-top:36px; background:var(--white); color:var(--ink);}
+.cta-strip .btn-pow:hover{background:var(--paper);}
+.cta-strip .hero-note{color:#ffe1e1; margin-top:16px;}
+
+footer{padding:34px 0; background:var(--ink);}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+footer .mono{font-size:12px; color:#b8b6ad;}
+footer a.fb{text-decoration:none; color:var(--white); border-bottom:2px solid var(--red); padding-bottom:1px;}
+footer a.fb:hover{color:var(--red);}
+
+@media (max-width:860px){
+  .about-grid, .mv-grid, .why-grid{grid-template-columns:1fr;}
+  .badges{grid-template-columns:repeat(2,1fr);}
+  .filmstrip{grid-template-columns:repeat(2,1fr);}
+  .filmstrip div{border-bottom:2px solid var(--red);}
+}
+</file>
+
+<file path="tsconfig.json">
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
+}
+</file>
+
+</files>

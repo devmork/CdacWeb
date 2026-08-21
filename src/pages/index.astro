@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const FORM_URL = "https://forms.gle/cCZSLsou414bvr5Z8";
+
+const focusAreas = [
+  { icon: "PH", title: "Photography", copy: "Event coverage, portraits, and personal projects, shot and shared with the group." },
+  { icon: "VD", title: "Videography", copy: "Recap videos, short docs, and campus coverage from concept to final cut." },
+  { icon: "ED", title: "Editing", copy: "Photo retouching and video post-production, the craft of shaping raw footage." },
+  { icon: "AN", title: "Animation", copy: "Motion graphics and animated shorts, from first sketch to rendered frame." },
+  { icon: "DS", title: "Design", copy: "Posters, layouts, and visual identity work for club and campus events." },
+];
+
+const whyJoin = [
+  { title: "A community of makers", copy: "Meet DMC students who care about the same crafts you do — shoot together, critique each other's work, and grow faster than you would solo." },
+  { title: "Real projects, real practice", copy: "Cover campus events, produce content, and build a portfolio out of work that actually got used, not just class exercises." },
+  { title: "Skill-sharing, not gatekeeping", copy: "Whether you're picking up a camera for the first time or already editing like a pro, members learn from each other on every project." },
+  { title: "A creative outlet on campus", copy: "A standing space at DMC where making things — photos, videos, art, design — is the whole point." },
+];
+---
+
+<Layout title="DMC Creative Digital Arts Club — Join Us">
+  <header class="hero">
+    <div class="hero-burst burst"></div>
+    <div class="wrap">
+      <span class="eyebrow-tag">DMC College Foundation, Inc. · Dipolog City</span>
+      <h1>Where creatives <span class="pop">team up.</span></h1>
+      <div class="speech-bubble">
+        DMC – Creative Digital Arts Club is a community for students who shoot, edit, animate, and design — a space to connect, collaborate, and grow your craft together.
+      </div>
+      <div class="hero-actions">
+        <a class="btn-pow" href={FORM_URL} target="_blank" rel="noopener">Fill Up the Form!</a>
+        <span class="hero-note mono">Takes ~5 minutes · Google Forms</span>
+      </div>
+
+      <div class="filmstrip">
+        <div>Photography</div>
+        <div>Videography</div>
+        <div>Editing</div>
+        <div>Animation</div>
+        <div>Design</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="tag-label">Issue #01 — About</span>
+        <h2>Your creative side, with an actual crew.</h2>
+      </div>
+      <div class="about-copy">
+        <p>The DMC Creative Digital Arts Club brings together <strong>DMC College Foundation</strong> students who are into <strong>photography, videography, editing, animation, and design</strong> — whether you're already building a portfolio or just curious where your creativity could go.</p>
+        <p>We're less a formal org and more a working studio: members shoot events together, trade feedback on edits, learn new tools from each other, and take on real creative projects for the campus community. No experience requirement — just genuine interest and a willingness to make stuff.</p>
+        <p>This page is your quick briefing before you apply. Read it, then head to the form — it only takes a few minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mv">
+    <div class="wrap">
+      <div class="mv-head">
+        <span class="tag-label">Issue #02 — The mission</span>
+        <h2>Mission &amp; Vision</h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card">
+          <span class="kicker">★ MISSION</span>
+          <h3>What we do</h3>
+          <p>To build a home for DMC students who create — where photographers, videographers, editors, animators, and designers can connect, learn from one another, and turn raw creativity into finished work, together.</p>
+        </div>
+        <div class="mv-card">
+          <span class="kicker">★ VISION</span>
+          <h3>Where we're going</h3>
+          <p>A DMC campus where student creativity is visible, valued, and always in motion — with the Creative Digital Arts Club as the launchpad where members grow from beginners into confident, capable creators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus">
+    <div class="wrap">
+      <div class="focus-head">
+        <span class="tag-label">Issue #03 — Skill tree</span>
+        <h2>Five crafts, one club.</h2>
+      </div>
+      <div class="badges">
+        {focusAreas.map((f) => (
+          <div class="stat-badge">
+            <div class="icon">{f.icon}</div>
+            <h4>{f.title}</h4>
+            <p>{f.copy}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="tag-label">Issue #04 — Perks</span>
+        <h2 style="font-size:clamp(28px,4.4vw,40px); margin-top:14px;">Why join?</h2>
+      </div>
+      <div class="why-list">
+        {whyJoin.map((w, i) => (
+          <div class="why-item">
+            <span class="num">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h4>{w.title}</h4>
+              <p>{w.copy}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="wrap">
+      <span class="eyebrow-tag" style="background:var(--ink);">Ready when you are</span>
+      <h2>Tell us about yourself and claim your spot.</h2>
+      <p>The application form covers the basics — who you are, what you make, and where you'd like to grow. Submit it and the club officers will follow up.</p>
+      <a class="btn-pow" href={FORM_URL} target="_blank" rel="noopener">Fill Up the Form!</a>
+      <div class="hero-note mono">forms.gle/cCZSLsou414bvr5Z8</div>
+    </div>
+  </section>
+</Layout>
